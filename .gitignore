@@ -1,0 +1,11 @@
+# Node
+/node_modules
+/yarn.lock
+/yarn-error.log
+
+# Parcel
+/.cache
+/theme/dist
+
+# Data
+/data
