@@ -1,5 +1,9 @@
 # Wordpress boilerplate
 
+- 💅 Uses [Stylus](http://stylus-lang.com/) for CSS
+- 📦 Zero config JS bundler with [Parcel](https://parceljs.org/)
+- 🖥 Preconfigured to 512Mb upload size
+
 ## Quickstart
 
 **Change the default password in `config/.env`**
@@ -16,7 +20,11 @@ yarn run dev
 # Go to http://localhost and activate your theme
 ```
 
-## Raccomended Plugins
+## Configure `php.ini`
+
+Put your custom php needs in `config/custom.ini`
+
+## Recommended Plugins
 
 - Advanced Custom Fields
 - All-in-One WP Migration
