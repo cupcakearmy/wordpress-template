@@ -1,8 +1,8 @@
 # Wordpress boilerplate
 
-- 💅 Uses [Stylus](http://stylus-lang.com/) for CSS
-- 📦 Zero config JS bundler with [Parcel](https://parceljs.org/)
-- 🖥 Preconfigured to 512Mb upload size
+- 💅 Uses [Stylus](http://stylus-lang.com/) for CSS.
+- 📦 Zero config JS bundler with [Parcel](https://parceljs.org/).
+- 🖥 Preconfigured to 512Mb upload size.
 
 ## Quickstart
 
