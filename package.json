@@ -1,0 +1,13 @@
+{
+	"private": true,
+	"scripts": {
+		"dev": "parcel watch -d theme/dist ./src/js/index.js ./src/styles/index.styl"
+	},
+	"dependencies": {
+		"jquery": "^3.4.1"
+	},
+	"devDependencies": {
+		"parcel-bundler": "^1.12.3",
+		"stylus": "^0.54.7"
+	}
+}
