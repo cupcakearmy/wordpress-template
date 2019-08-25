@@ -12,7 +12,7 @@ services:
     ports:
       - 80:80
     volumes:
-        - ./config/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
+        - ./config/custom.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
         - ./data/wp:/var/www/html
         - ./theme:/var/www/html/wp-content/themes/theme:ro
 
