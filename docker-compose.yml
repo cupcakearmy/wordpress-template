@@ -1,23 +1,33 @@
-version: '3.7'
+version: "3.7"
 
 x-default: &default
   restart: unless-stopped
   env_file: ./config/.env
 
 services:
-
-  wp:
-    <<: *default
-    build: ./config
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    depends_on:
+      - wordpress
+    volumes:
+      - ./config/nginx:/etc/nginx/conf.d
+      - ./data/wp:/var/www/html
     ports:
       - 80:80
+
+  wordpress:
+    <<: *default
+    build: ./config/wp
     volumes:
-        - ./config/custom.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
-        - ./data/wp:/var/www/html
-        - ./theme:/var/www/html/wp-content/themes/theme:ro
+      - ./config/wp/custom.conf:/usr/local/etc/php-fpm.d/custom.conf
+      - ./data/wp:/var/www/html
+      - ./theme:/var/www/html/wp-content/themes/theme:ro
+    depends_on:
+      - db
 
   db:
     <<: *default
-    image: mariadb:10.3
+    image: mariadb:10
     volumes:
       - ./data/db:/var/lib/mysql
